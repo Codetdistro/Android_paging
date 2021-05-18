@@ -1,5 +1,10 @@
 package com.example.android_paging.data
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+
+@Entity(tableName = "news")
 data class New(
     val favorite: Int,
     val image_source_link: String,
@@ -11,6 +16,7 @@ data class New(
     val member_profile_pic: String,
     val member_username: String,
     val news_content: String,
+    @PrimaryKey
     val news_id: String,
     val news_image: String,
     val news_publishdate: String,
